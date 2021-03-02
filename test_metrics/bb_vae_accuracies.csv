@@ -1,0 +1,10 @@
+;accuracy;reconstruction_accuracy
+cbf_knn;1.0;1.0
+cbf_resnet;1.0;1.0
+ecg200_knn;0.88;1.0
+ecg200_resnet;0.88;0.99
+coffee_knn;1.0;1.0
+coffee_resnet;1.0;1.0
+gunpoint_knn;0.9133333333333333;0.9933333333333333
+gunpoint_resnet;0.9933333333333333;0.9933333333333333
+synth04_pat;1.0;0.9880952380952381
