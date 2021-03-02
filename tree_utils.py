@@ -245,12 +245,3 @@ def precision_score_tree(dt, X, y, leaf_id):
 
 def precision_score_tree2(dt, x):
     x_leave_id = dt.apply(x)[0]
-
-
-if __name__ == "__main__":
-    from sklearn.datasets import load_iris
-    from sklearn import tree
-
-    X, y = load_iris(return_X_y=True)
-    clf = tree.DecisionTreeClassifier()
-    clf = clf.fit(X, y)

@@ -11,7 +11,12 @@ from shap_explainer import ShapTimeSeries
 from sklearn.neighbors import NearestNeighbors
 from lasts import instability_lasts
 from shap_explainer import instability_shap
-from joblib import dump
+from datasets import build_cbf, build_ecg200, build_gunpoint, build_coffee, build_synth
+from joblib import load, dump
+import keras
+from variational_autoencoder import load_model
+from blackbox_wrapper import BlackboxWrapper
+from ts_generator import PatternClassifier, TimeSeriesGenerator, LocalPattern, PolynomialClassifier, GlobalFeature
 
 
 def test_accuracy(clf_list, clf_names, X, y):
@@ -421,17 +426,3 @@ def get_accuracies_df():
         df_agg = pd.concat([df_acc, df_rec_acc], axis=1)
         df = df.append(df_agg)
     return df
-
-
-if __name__ == "__main__":
-    from datasets import build_cbf, build_ecg200, build_gunpoint, build_coffee, build_synth
-    from joblib import load, dump
-    import keras
-    from variational_autoencoder import load_model
-    from blackbox_wrapper import BlackboxWrapper
-    from ts_generator import PatternClassifier, TimeSeriesGenerator, LocalPattern, PolynomialClassifier, GlobalFeature
-    #df = get_accuracies_df()
-    #df = get_fidelities_df()
-    #df = get_autoencoders_mse()
-    #df = get_usefulness_df()
-    df = get_explanation_error_df()
