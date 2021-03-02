@@ -1,0 +1,37 @@
+name: lasts_environment
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.6
+  - tensorflow=1.13.1
+  - keras=2.2.5
+  - jupyter
+  - pandas
+  - matplotlib
+  - scikit-learn=0.23.1
+  - dill
+  - imbalanced-learn=0.5.0
+  - requests
+  - bitarray
+  - tslearn=0.2.5
+  - tqdm
+  - terminaltables
+  - cython
+  - spyder==3.3.6
+  - shap
+  - pyts
+  - graphviz
+  - python-graphviz
+  - pydot
+  - stumpy
+  - seaborn
+  - pip
+  - pip:
+    - torchvision
+    - deap
+    - liac-arff
+    - scikit-multilearn
+    - ruptures
+    - sktime==0.4.1
+
